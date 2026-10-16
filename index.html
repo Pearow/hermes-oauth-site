@@ -3,27 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hermes Personal Assistant: a personal, single-user assistant with an owner-authorized Google Calendar integration.">
+  <meta name="description" content="Hermes Personal Assistant: private, owner-directed Google Calendar and Gmail assistance using local AI processing.">
   <title>Hermes Personal Assistant</title>
   <style>
-    :root { color-scheme: light dark; }
-    body { max-width: 48rem; margin: 3rem auto; padding: 0 1.25rem; font: 1rem/1.7 system-ui, sans-serif; }
-    h1, h2 { line-height: 1.25; }
-    a { color: #276ac1; }
-    @media (prefers-color-scheme: dark) { a { color: #8cbfff; } }
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17212b; background: #f5f7fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.65; }
+    header, main, footer { width: min(100% - 2rem, 860px); margin-inline: auto; }
+    header { padding: 2rem 0 1rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    a { color: #075db5; }
+    main { background: #fff; padding: clamp(1.25rem, 5vw, 3rem); border-radius: 1rem; box-shadow: 0 5px 24px #10203012; }
+    h1 { line-height: 1.2; font-size: clamp(2rem, 6vw, 3rem); }
+    h2 { margin-top: 2rem; }
+    .notice { padding: 1rem; border-left: 4px solid #b87900; background: #fff8e8; }
+    footer { padding: 1.5rem 0 2.5rem; color: #43505c; }
   </style>
 </head>
 <body>
+  <header><nav aria-label="Site"><a href="./index.html">Home</a><a href="./privacy.html">Privacy</a></nav></header>
   <main>
     <h1>Hermes Personal Assistant</h1>
-    <p>A personal, single-user assistant operated by Pearow for organizing tasks, notes, and calendar activities. It is not a public sign-up service.</p>
-    <h2>Google Calendar integration</h2>
-    <p>With the owner's authorization, the assistant lists calendars, reads events and availability, and creates, edits, or deletes individual events in selected existing calendars when instructed. It does not request Gmail access.</p>
-    <p>The assistant is configured to use a locally hosted AI model. Calendar information may appear in replies delivered to the owner through Telegram. This website is informational: it does not connect to Google Calendar, collect credentials, or host the assistant.</p>
-    <nav aria-label="Information">
-      <p><a href="privacy.html">Privacy policy</a> &middot; <a href="https://github.com/Pearow/hermes-oauth-site/issues">Contact the operator</a></p>
-    </nav>
-    <p>Do not post private messages, calendar information, or credentials in public GitHub issues.</p>
+    <p>A personal assistant for its owner, available through a private Telegram conversation. It can summarize selected Google Calendar information, search and read Gmail when asked, and prepare concise on-demand briefings.</p>
+    <p>AI interpretation is performed with a locally run Qwen model. Google and Telegram still process information as part of their services; local model processing does not mean that data never leaves those services or the device environment.</p>
+    <h2>What it can do</h2>
+    <ul>
+      <li>Read events and availability from the owner's selected Google Calendars. At the owner's request it can create a fully specified individual timed event. Editing or deleting an individual event or occurrence requires a complete preview and confirmation in a later owner turn. No attendees, invitations, bulk changes, or whole-series changes are supported.</li>
+      <li>Search Gmail on request (by default, unread messages in the inbox), read and summarize relevant messages, and include up to five concise email highlights in an on-demand briefing. It does not continuously monitor email.</li>
+      <li>Remove unread status only through a separate, explicitly requested preview-and-later-confirmation workflow for eligible routine promotions/newsletters.</li>
+      <li>Download an attachment only when the owner explicitly requests that specific attachment. Attachments are not opened, executed, extracted, or downloaded automatically.</li>
+    </ul>
+    <p class="notice"><strong>Google permission note:</strong> the Gmail authorization grant permits broader Google account actions than this assistant exposes, including sending and trashing mail. The assistant's supported workflow is not credential-level containment. Calendar and Gmail access is locally authorized for the same owner account.</p>
+    <p>See the <a href="./privacy.html">Privacy Policy</a> for data handling details.</p>
   </main>
+  <footer><p>Questions or concerns: use the project's <a href="https://github.com/Pearow/hermes-oauth-site/issues">public GitHub issues</a>. Issues are public; do not post private email or calendar content, credentials, or authorization codes.</p></footer>
 </body>
 </html>

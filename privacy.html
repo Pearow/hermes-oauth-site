@@ -3,36 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy policy for the personal Google Calendar integration in Hermes Personal Assistant.">
-  <title>Privacy Policy | Hermes Personal Assistant</title>
+  <meta name="description" content="Privacy information for Hermes Personal Assistant's Google Calendar and Gmail features.">
+  <title>Privacy — Hermes Personal Assistant</title>
   <style>
-    :root { color-scheme: light dark; }
-    body { max-width: 48rem; margin: 3rem auto; padding: 0 1.25rem; font: 1rem/1.7 system-ui, sans-serif; }
-    h1, h2 { line-height: 1.25; }
-    a { color: #276ac1; }
-    @media (prefers-color-scheme: dark) { a { color: #8cbfff; } }
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17212b; background: #f5f7fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.65; }
+    header, main, footer { width: min(100% - 2rem, 860px); margin-inline: auto; }
+    header { padding: 2rem 0 1rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    a { color: #075db5; overflow-wrap: anywhere; }
+    main { background: #fff; padding: clamp(1.25rem, 5vw, 3rem); border-radius: 1rem; box-shadow: 0 5px 24px #10203012; }
+    h1 { line-height: 1.2; font-size: clamp(2rem, 6vw, 3rem); }
+    h2 { margin-top: 2rem; }
+    footer { padding: 1.5rem 0 2.5rem; color: #43505c; }
   </style>
 </head>
 <body>
+  <header><nav aria-label="Site"><a href="./index.html">Home</a><a href="./privacy.html">Privacy</a></nav></header>
   <main>
-    <p><a href="index.html">Home</a></p>
     <h1>Privacy Policy</h1>
-    <p>Hermes Personal Assistant &mdash; operated by Pearow. Last updated: October 17, 2026.</p>
-    <p>This notice covers the owner's personal Google Calendar integration and this informational website. The assistant is intended for its owner, not public registration.</p>
-    <h2>Information accessed and its purpose</h2>
-    <p>After the owner grants access, the integration accesses calendar-list information, calendar events, and free/busy information. It uses these to display schedules, assist with planning, and create, edit, or delete individual events in selected existing calendars at the owner's request. OAuth credentials and calendar selections are stored to maintain that connection. The integration does not request Gmail access.</p>
-    <h2>Processing, storage, and sharing</h2>
-    <p>The assistant is configured to process Calendar information using a locally hosted AI model rather than a cloud AI model. Authorization credentials, calendar selections, conversation history, event-change drafts, receipts, recovery snapshots, and backups may be stored on the owner's computer.</p>
-    <p>Google processes Calendar API requests and authorization. When Calendar information is included in a Telegram conversation, Telegram processes those messages under its own policies. Local model processing does not mean that all information stays off external services.</p>
-    <p>The operator does not sell Google user data or use it for advertising or training AI models. Access is intended for the owner and for operating and maintaining the personal assistant.</p>
-    <h2>Retention, deletion, and revoking access</h2>
-    <p>Local records are retained until removed by the owner. The owner can revoke the app's Google access through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revoking access prevents continued authorized access but does not automatically delete locally stored history, tokens, drafts, snapshots, or backups. Those copies must be removed separately by the owner. Removing a local copy does not delete the original Google Calendar event.</p>
-    <h2>This website</h2>
-    <p>These static pages contain no application forms, analytics scripts, or Calendar connection. They do not receive Google Calendar content or OAuth tokens. GitHub Pages hosts the website and may process visitor information, such as IP addresses, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
-    <h2>Google API user data policy</h2>
-    <p>Hermes Personal Assistant's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    <p><strong>Hermes Personal Assistant</strong> is a personal assistant for its owner, used through a private Telegram conversation. This policy describes its Google Calendar and Gmail features as of October 17, 2026.</p>
+    <h2>Information processed and purpose</h2>
+    <p>When the owner asks, Hermes reads event details and availability from the owner's selected Google Calendars and searches or reads Gmail messages to answer the request or prepare an on-demand briefing. Gmail searches default to unread messages in the inbox unless the owner specifies a query. Briefings can include at most five concise email highlights. Hermes does not poll or schedule email checks.</p>
+    <p>Calendar support includes event and availability reads, explicitly requested creation of a fully specified individual timed event, and individual event/occurrence edits or deletion only after a full preview and confirmation in a later owner turn. Gmail supports search and reading, explicit download of a specifically requested attachment, and a separate preview/later-confirmation workflow for marking selected eligible routine promotional/newsletter messages as read. No email sending, replying, drafting, archiving, deletion, trashing, or other label changes are exposed. Attachments are not automatically downloaded, opened, executed, or extracted. The owner must explicitly request any particular attachment download.</p>
+    <h2>Processing and sharing</h2>
+    <p>Message and calendar content is interpreted by a locally run Qwen model; Hermes does not send private content to cloud AI helpers or use it for web research. This does not mean all data processing is local: Google processes data for its services and Telegram processes conversation data to deliver messages. The owner should review those providers' own privacy terms.</p>
+    <p>Google account authorization is configured locally and Gmail and Calendar use the same account. The Gmail grant permits broader actions at Google account level than the assistant's exposed workflow, including sending and trashing mail. The workflow is not credential-level containment, and no claim is made that the credential itself is incapable of other actions. Google Calendar access is restricted in the workflow to the owner's selected calendars; selection and confirmation are workflow controls.</p>
+    <p>The assistant does not sell personal data, serve ads, or use private mail/calendar content to train models. The owner can explicitly download an individual attachment; Hermes does not provide a bulk mailbox export.</p>
+    <h2>Retention and owner control</h2>
+    <p>The owner can revoke Google's access for Hermes at <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation stops future authorized access but does not automatically delete locally retained conversation history, tokens, downloaded files, operation previews or receipts, or backups. The owner can remove these individual records and files through local maintenance of the owner's Hermes data and storage. Removing a local copy does not delete or otherwise change the corresponding mail in Gmail. This page does not promise a particular automatic deletion period or backup-erasure schedule.</p>
+    <h2>Website information</h2>
+    <p>This is a static site hosted through GitHub Pages. GitHub may process request information, such as IP addresses, under its own practices. The pages contain no forms, JavaScript, analytics, cookies, or external assets. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.</p>
+    <h2>Google policies</h2>
+    <p>Hermes Personal Assistant's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Google Workspace API data handling is also subject to the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace API User Data and Developer Policy</a>.</p>
+    <ul>
+      <li><a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy, including Limited Use requirements</a></li>
+      <li><a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace API User Data and Developer Policy</a></li>
+    </ul>
     <h2>Contact</h2>
-    <p>Contact the operator through the <a href="https://github.com/Pearow/hermes-oauth-site/issues">website repository's issue page</a>. Issues are public: do not include private messages, calendar information, authorization codes, or credentials.</p>
+    <p>For questions, use the project's <a href="https://github.com/Pearow/hermes-oauth-site/issues">public GitHub issues</a>. Issues are public: do not include private mail or calendar details, personal data, credentials, or authorization codes.</p>
   </main>
+  <footer><a href="./index.html">Hermes Personal Assistant</a></footer>
 </body>
 </html>
