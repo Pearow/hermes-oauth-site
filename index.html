@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hermes Personal Assistant: private, owner-directed Google Calendar and Gmail assistance using local AI processing.">
+  <meta name="description" content="A private, owner-directed personal assistant for email, calendar information and briefings.">
   <title>Hermes Personal Assistant</title>
   <style>
     :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17212b; background: #f5f7fa; }
@@ -24,18 +24,16 @@
   <header><nav aria-label="Site"><a href="./index.html">Home</a><a href="./privacy.html">Privacy</a></nav></header>
   <main>
     <h1>Hermes Personal Assistant</h1>
-    <p>A personal assistant for its owner, available through a private Telegram conversation. It can summarize selected Google Calendar information, search and read Gmail when asked, and prepare concise on-demand briefings.</p>
-    <p>AI interpretation is performed with a locally run Qwen model. Google and Telegram still process information as part of their services; local model processing does not mean that data never leaves those services or the device environment.</p>
+    <p>A private personal assistant for its owner, helping with requested email and calendar information, reminders and briefings.</p>
+    <p>When enabled, cloud AI processing through Cloudflare may receive relevant requests, conversation context and tool results. Google and Telegram also process information for their services. AI processing is not guaranteed to be local. See the <a href="./privacy.html">Privacy Policy</a>.</p>
     <h2>What it can do</h2>
     <ul>
-      <li>Read events and availability from the owner's selected Google Calendars. At the owner's request it can create a fully specified individual timed event. Editing or deleting an individual event or occurrence requires a complete preview and confirmation in a later owner turn. No attendees, invitations, bulk changes, or whole-series changes are supported.</li>
-      <li>Search Gmail on request (by default, unread messages in the inbox), read and summarize relevant messages, and include up to five concise email highlights in an on-demand briefing. It does not continuously monitor email.</li>
-      <li>Remove unread status only through a separate, explicitly requested preview-and-later-confirmation workflow for eligible routine promotions/newsletters.</li>
-      <li>Download an attachment only when the owner explicitly requests that specific attachment. Attachments are not opened, executed, extracted, or downloaded automatically.</li>
+      <li>Owner-requested calendar assistance, with preview and later confirmation for edits or deletion.</li>
+      <li>On-demand email search and summaries, explicitly requested attachments and narrowly confirmed mark-as-read actions.</li>
+      <li>On-demand briefings, without background email monitoring.</li>
     </ul>
-    <p class="notice"><strong>Google permission note:</strong> the Gmail authorization grant permits broader Google account actions than this assistant exposes, including sending and trashing mail. The assistant's supported workflow is not credential-level containment. Calendar and Gmail access is locally authorized for the same owner account.</p>
-    <p>See the <a href="./privacy.html">Privacy Policy</a> for data handling details.</p>
+    <p class="notice">Supported features, Google permissions and data-handling limits are described in the <a href="./privacy.html">Privacy Policy</a>.</p>
   </main>
-  <footer><p>Questions or concerns: use the project's <a href="https://github.com/Pearow/hermes-oauth-site/issues">public GitHub issues</a>. Issues are public; do not post private email or calendar content, credentials, or authorization codes.</p></footer>
+  <footer><p><a href="https://github.com/Pearow/hermes-oauth-site/issues">Contact</a> — issues are public. Never post private information or credentials.</p></footer>
 </body>
 </html>
